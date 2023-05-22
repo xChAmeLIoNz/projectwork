@@ -254,14 +254,11 @@
         console.log("Hai cliccato!"); //funziona
         //var data = 
         $.ajax({
-            url: 'getData.php',
-            type: 'post',
-            data: {
-                data: 'qualcosa'
-            },
+            url: 'https://worker.afogliiseppe.workers.dev/',
+            type: 'get',
             success: (response) => {
                 var obj = JSON.parse(response);
-                alert(obj.response);
+                alert(obj.message);
 
             }
         });
